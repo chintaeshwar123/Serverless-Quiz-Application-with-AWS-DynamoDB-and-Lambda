@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Form</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      background-color: #f4f4f4;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      height: 100vh;
+    }
+
+    form {
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease-in-out;
+    }
+
+    h2 {
+      text-align: center;
+      color: #333;
+      margin-bottom: 20px;
+    }
+
+    label {
+      display: block;
+      margin: 10px 0 5px;
+      color: #555;
+    }
+
+    input,
+    textarea {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 10px;
+      box-sizing: border-box;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+
+    input[type="submit"] {
+      background-color: #4caf50;
+      color: #fff;
+      cursor: pointer;
+      font-size: 16px; /* Increased text size for submit button */
+    }
+
+    input[type="submit"]:hover {
+      background-color: #45a049;
+    }
+
+    /* Additional styles for animation */
+    form:hover {
+      transform: scale(1.05);
+    }
+
+    /* Additional styles for footer */
+    footer {
+      margin-top: 20px;
+      font-size: 18px;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <form action="/dev" method="post">
+   <label for="email">email</label>
+    <input type="text" id="email" name="email" required>
+<h2>Cricket Quiz</h2>
+        <div class="question">
+            <strong>1. Who is known as the "Master Blaster"?</strong>
+            <div class="options">
+                <label class="option"><input type="radio" name="q1" value="a"> A. Sachin Tendulkar</label>
+                <label class="option"><input type="radio" name="q1" value="b"> B. Virat Kohli</label>
+                <label class="option"><input type="radio" name="q1" value="c"> C. Ricky Ponting</label>
+                <label class="option"><input type="radio" name="q1" value="d"> D. Brian Lara</label>
+            </div>
+        </div>
+          <div class="question">
+            <strong>2. Which country won the Cricket World Cup in 2019?</strong>
+            <div class="options">
+                <label class="option"><input type="radio" name="q2" value="a"> A. India</label>
+                <label class="option"><input type="radio" name="q2" value="b"> B. England</label>
+                <label class="option"><input type="radio" name="q2" value="c"> C. Australia</label>
+                <label class="option"><input type="radio" name="q2" value="d"> D. New Zealand</label>
+            </div>
+        </div>
+        <div class="question">
+            <strong>3. Who holds the record for the highest individual score in Test cricket?</strong>
+            <div class="options">
+                <label class="option"><input type="radio" name="q3" value="a"> A. Brian Lara</label>
+                <label class="option"><input type="radio" name="q3" value="b"> B. Sachin Tendulkar</label>
+                <label class="option"><input type="radio" name="q3" value="c"> C. Don Bradman</label>
+                <label class="option"><input type="radio" name="q3" value="d"> D. Virender Sehwag</label>
+            </div>
+        </div>
+    <input type="submit" value="Submit">
+  </form>
+
+  <!-- Simple JavaScript for animation -->
+  <script>
+    const form = document.querySelector('form');
+
+    form.addEventListener('mouseover', () => {
+      form.style.transform = 'scale(1.05)';
+    });
+
+    form.addEventListener('mouseout', () => {
+      form.style.transform = 'scale(1)';
+    });
+  </script>
+</body>
+</html>
